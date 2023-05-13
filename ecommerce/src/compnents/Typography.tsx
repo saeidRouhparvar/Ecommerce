@@ -22,3 +22,4 @@ const Typography = {
   H5: { fontWeight: 700, fontSize: "20px", lineHeight: "24px" },
   H6: { fontWeight: 700, fontSize: "16px", lineHeight: "20px" },
 };
+export default {...Typography}

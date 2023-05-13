@@ -18,7 +18,8 @@ const ColorNatural = {
   Natural18: "#D9D9D9",
   Natural19: "#E6E6E6",
   Natural20: "#F2F2F2",
-  Natural21: "#FFFFFF",
+  Natural21: "#FCFCFC",
+  Natural22: "#FFFFFF",
 };
 const ColorPrimary = {
   Primery1: "#06080E",
