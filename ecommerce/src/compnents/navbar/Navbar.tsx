@@ -2,6 +2,7 @@ import { Box, BoxProps, Flex, space, useColorMode } from "@chakra-ui/react";
 import React from "react";
 import Color from "../Color";
 import Typography from "../Typography";
+import Button from "../Form/Button";
 
 interface Interface extends BoxProps {
   reset?: any;
@@ -19,7 +20,9 @@ const Navbar = ({ ...reset }: Interface) => {
       }
       justifyContent={"space-between"}
       alignItems={'center'}
+      {...reset}
     >
+      <Button variant="colorPrimary">sdsadsa</Button>
       <Flex gap={"22px"} 
       alignItems={'center'}
       >

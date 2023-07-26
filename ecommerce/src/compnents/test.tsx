@@ -1,5 +1,5 @@
 import React from 'react'
-import Butten from './Form/Butten'
+import Butten from './Form/Button'
 
 export default function Test() {
   return (

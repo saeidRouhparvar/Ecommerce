@@ -10,14 +10,14 @@ enum VariantEnum {
 interface Interface extends ButtonProps {
   children?: any;
   reset?: any;
-  variant?: VariantEnum | any;
+  variant?:"colorPrimary" | "colorSecondary";
 }
 
-const Butten = ({ children, variant, ...reset }: Interface) => {
+const Button = ({ children, variant, ...reset }: Interface) => {
   return (
     <ChakraButton variant={variant} {...reset}>
       {children}
     </ChakraButton>
   );
 };
-export default Butten;
+export default Button;
