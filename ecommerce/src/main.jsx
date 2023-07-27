@@ -1,8 +1,8 @@
-import React from "react";
 import * as ReactDOM from "react-dom/client";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import App from "./App";
 import { ChakraProvider } from "@chakra-ui/react";
+import theme from './theme'
 
 const client = new ApolloClient({
   uri: "https://flyby-router-demo.herokuapp.com/",
@@ -13,7 +13,7 @@ const client = new ApolloClient({
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <ChakraProvider>
+  <ChakraProvider theme={theme}>
     <ApolloProvider client={client}>
       <App />
     </ApolloProvider>
