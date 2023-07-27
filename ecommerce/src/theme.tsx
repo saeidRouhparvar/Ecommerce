@@ -6,3 +6,5 @@ const theme = extendTheme({
         Button: ButtonStyle,
     }
 })
+
+export default theme

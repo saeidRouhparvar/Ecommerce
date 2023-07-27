@@ -21,7 +21,7 @@ const ColorNatural = {
   Natural21: "#FCFCFC",
   Natural22: "#FFFFFF",
 };
-const ColorPrimary = {
+const ColorPrimery = {
   Primery1: "#06080E",
   Primery2: "#0E1220",
   Primery3: "#161C31",
@@ -91,4 +91,4 @@ const ColorSementic = {
   Info6:'#88C4F2',
   Info7:'#B6DBF7',
 };
-export default { ColorNatural, ColorPrimary, ColorSecondary,ColorSementic };
+export default { ColorNatural, ColorPrimery, ColorSecondary,ColorSementic };
