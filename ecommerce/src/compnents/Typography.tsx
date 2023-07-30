@@ -15,6 +15,7 @@ const Typography = {
   Caption_Regular: { fontWeight: 400, fontSize: "12px", lineHeight: "20px" },
   Caption_Medium: { fontWeight: 500, fontSize: "12px", lineHeight: "20px" },
   Caption_Small: { fontWeight: 400, fontSize: "10px", lineHeight: "16px" },
+  Caption_Input: { fontWeight: 400, fontSize: "12px", lineHeight: "16px" },
   H1: { fontWeight: 700, fontSize: "40px", lineHeight: "56px" },
   H2: { fontWeight: 700, fontSize: "32px", lineHeight: "40px" },
   H3: { fontWeight: 700, fontSize: "28px", lineHeight: "32px" },
