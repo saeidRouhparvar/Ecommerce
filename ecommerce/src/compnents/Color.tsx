@@ -83,6 +83,7 @@ const ColorSementic = {
   Alert4: "#F4E952",
   Alert5: "#FAF5B2",
   Alert6: "#F7EF82",
+  Alert7: "#FFFEFA",
   Info1:'#0C446E',
   Info2:'#11609C',
   Info3:'#167CCA',
