@@ -1,30 +1,30 @@
 import { Box, Input as ChakraInput, useColorMode } from "@chakra-ui/react";
-import { ButtonProps } from "@chakra-ui/button/dist/button";
+import { InputProps } from "@chakra-ui/input/dist/input";
 import React from "react";
-import Color from "../Color";
-import Typography from "../Typography";
 
 enum VariantEnum {
-    InputNatural="InputNatural"
-  }
-  
-  interface Interface extends ButtonProps {
-    children?: any;
-    reset?: any;
-    variant?:
-       "InputNatural"
-  }
+  InputNatural = "InputNatural",
+  InputSementic = "InputSementic",
+  InputAlert = "InputAlert",
+}
 
-const Input = ({variant, ...reset}:Interface) => {
+interface Interface extends InputProps {
+  children?: any;
+  reset?: any;
+  placeholder?: any;
+  variant?: "InputNatural" | "InputSementic" | "InputAlert";
+}
+
+const Input = ({ variant, placeholder, ...reset }: Interface) => {
   const { colorMode } = useColorMode();
   return (
-    <Box width={"full"} position={"relative"}>
+    <Box width={"full"} position={"relative"} {...reset}>
       <ChakraInput
         w={"100%"}
         p={"12px"}
         h={"48px"}
         variant={variant}
-  
+        placeholder={placeholder}
       />
     </Box>
   );
