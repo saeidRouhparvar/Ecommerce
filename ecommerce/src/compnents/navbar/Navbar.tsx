@@ -5,6 +5,7 @@ import Typography from "../Typography";
 import Button from "../Form/Button";
 import Container from "../Container";
 import Input from "../Form/Input";
+import ChakraSwitch from "../Form/Switch";
 
 interface Interface extends BoxProps {
   reset?: any;
@@ -132,8 +133,8 @@ const Navbar = ({ ...reset }: Interface) => {
         </Flex>
       </Flex>
       <Box>
-        <Input variant="InputNatural"/>
       </Box>
+      <Input variant="InputAlert" placeholder="fdgfdgfdgfdgdg"/>
     </Container>
   );
 };
