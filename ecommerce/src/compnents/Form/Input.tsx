@@ -4,15 +4,17 @@ import React from "react";
 
 enum VariantEnum {
   InputNatural = "InputNatural",
-  InputSementic = "InputSementic",
-  InputAlert = "InputAlert",
+  InputAlert = "InputAlertWarning",
+  InputSementic = "InputAlertError",
+  InputAlertInfo = "InputAlertInfo",
+  InputAlertSuccess = "InputAlertSuccess"
 }
 
 interface Interface extends InputProps {
   children?: any;
   reset?: any;
   placeholder?: any;
-  variant?: "InputNatural" | "InputSementic" | "InputAlert";
+  variant?: "InputNatural" | "InputAlertWarning" | "InputAlertError" | "InputAlertInfo" | "InputAlertSuccess";
 }
 
 const Input = ({ variant, placeholder, ...reset }: Interface) => {
