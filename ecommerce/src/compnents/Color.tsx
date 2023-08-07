@@ -71,12 +71,14 @@ const ColorSementic = {
   Success4: "#83D175",
   Success5: "#A5DE9C",
   Success6: "#C7EBC2",
+  Success7: "#FCFEFB",
   Error1: "#9C1111",
   Error2: "#CA1616",
   Error3: "#E72B2B",
   Error4: "#ED5A5A",
   Error5: "#F7B6B6",
   Error6: "#F28888",
+  Error7: "#FEFCFA",
   Alert1: "#D3A50D",
   Alert2: "#F1C122",
   Alert3: "#F1E321",
@@ -91,5 +93,6 @@ const ColorSementic = {
   Info5:'#5AADED',
   Info6:'#88C4F2',
   Info7:'#B6DBF7',
+  Info8:'#FAFDFE',
 };
 export default { ColorNatural, ColorPrimery, ColorSecondary,ColorSementic };
