@@ -1,21 +1,18 @@
-import React from 'react'
-import {Radio as RadioButton} from "@chakra-ui/react";
-import {RadioProps} from "@chakra-ui/radio/dist/radio";
-
+import React from "react";
+// import { Radio as RadioButton,Input } from "@chakra-ui/react";
+import { RadioProps } from "@chakra-ui/radio/dist/radio";
 
 interface Interface extends RadioProps {
-    children?:any
-    reset?: any
+  children?: any;
+  reset?: any;
 }
 
-const RadioBtn = ({children,...reset}:Interface) => {
+const RadioBtn = ({ children, ...reset }: Interface) => {
   return (
-    <RadioButton
-   colorScheme='green' variant={"outline"}
-    {...reset}>
-        {children}
-    </RadioButton>
-  )
-}
+    <RadioBtn>
+      <input type="radio"/>
+    </RadioBtn>
+  );
+};
 
-export default RadioBtn
+export default RadioBtn;
