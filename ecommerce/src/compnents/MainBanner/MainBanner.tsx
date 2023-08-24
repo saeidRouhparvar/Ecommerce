@@ -3,6 +3,8 @@ import React from "react";
 import Typography from "../Typography";
 import Color from "../Color";
 import Container from "../Container";
+import Mask from "../../assets/img/Mask group.svg";
+import banner from "../../assets/img/banner.png";
 
 const MainBanner = () => {
   const { colorMode } = useColorMode();
@@ -85,7 +87,17 @@ const MainBanner = () => {
           </Flex>
         </Flex>
       </Container>
-      <Box></Box>
+      <Box >
+        <Box mt={"-30px"} as="img" src={Mask} mx={0}></Box>
+        <Box
+          mt={"-30px"}
+          as="img"
+          src={banner}
+          pos={"absolute"}
+          right={"0"}
+          bottom={"13px"}
+        ></Box>
+      </Box>
     </Flex>
   );
 };
