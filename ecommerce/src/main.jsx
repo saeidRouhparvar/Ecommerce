@@ -2,20 +2,12 @@ import * as ReactDOM from "react-dom/client";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import App from "./App";
 import { ChakraProvider } from "@chakra-ui/react";
-import theme from './theme'
-
-const client = new ApolloClient({
-  uri: "https://flyby-router-demo.herokuapp.com/",
-  cache: new InMemoryCache(),
-});
 
 // Supported in React 18+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <ChakraProvider theme={theme}>
-    <ApolloProvider client={client}>
+  <ChakraProvider >
       <App />
-    </ApolloProvider>
   </ChakraProvider>
 );
