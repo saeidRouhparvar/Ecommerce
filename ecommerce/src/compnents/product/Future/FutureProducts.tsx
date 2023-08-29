@@ -4,6 +4,39 @@ import FutureProductsCard from "./FutureProductsCard";
 import SectionHeader from "../SectionHeader";
 import Typography from "../../Typography";
 import Color from "../../Color";
+import pic from "../../../assets/img/14-1.png";
+import Container from "../../Container";
+
+const CardData = [
+  {
+    id: 1,
+    description: "Women’s light weight knit hoodie sweater pullover",
+    img: pic,
+    count: "2021",
+    title: "Slip On Shoes Casual with Arch Support Insoles",
+  },
+  {
+    id: 1,
+    description: "Women’s light weight knit hoodie sweater pullover",
+    img: pic,
+    count: "2021",
+    title: "Slip On Shoes Casual with Arch Support Insoles",
+  },
+  {
+    id: 1,
+    description: "Women’s light weight knit hoodie sweater pullover",
+    img: pic,
+    count: "2021",
+    title: "Slip On Shoes Casual with Arch Support Insoles",
+  },
+  {
+    id: 1,
+    description: "Women’s light weight knit hoodie sweater pullover",
+    img: pic,
+    count: "2021",
+    title: "Slip On Shoes Casual with Arch Support Insoles",
+  },
+];
 
 const FutureProducts = () => {
   const { colorMode } = useColorMode();
@@ -41,7 +74,17 @@ const FutureProducts = () => {
           </Box>
         </Flex>
       </Flex>
-      <FutureProductsCard />
+      <Container>
+        <Flex gap={"16px"} overflow={"scroll"}>
+          {CardData.map((item: any) => (
+            <FutureProductsCard
+              cardImage={item.img}
+              description={item.description}
+              title={item.title}
+            />
+          ))}
+        </Flex>
+      </Container>
     </Box>
   );
 };
