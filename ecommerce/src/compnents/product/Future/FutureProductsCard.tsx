@@ -8,15 +8,17 @@ import { Arrow } from "../../Svg";
 
 const Images = [{ id: 1, src: "../../" }];
 
-// interface Interface extends BoxProps {
-//   reset?:any
-//   cardImage?:any
-// }
+interface Interface extends BoxProps {
+  reset?:any
+  cardImage?:any
+  title?:string
+  description?:string
+}
 
-const FutureProductsCard = () => {
+const FutureProductsCard = ({title,description,cardImage,...reset}) => {
   const { colorMode } = useColorMode();
   return (
-    <Box mb={"56px"} mt={"28px"}>
+    <Box mb={4} mt={"28px"}>
       <Box maxW={"160px"} >
           <Box as="img" src={cardImage} />
           <Flex direction={"column"} gap={"8px"} mt={"12px"}>
@@ -27,7 +29,7 @@ const FutureProductsCard = () => {
               {...Typography.Body2_Medium}
               color={colorMode === "light" ? Color.ColorNatural.Natural6 : ""}
             >
-              Slip On Shoes Casual with Arch Support Insoles
+              {title}
             </Box>
             <Box
               whiteSpace={"nowrap"}
@@ -36,7 +38,8 @@ const FutureProductsCard = () => {
               {...Typography.Caption_Regular}
               color={colorMode === "light" ? Color.ColorNatural.Natural10 : ""}
             >
-              Donec sollicitudin aliquam metus nec laoreet ...
+              {description}
+              {/* Donec sollicitudin aliquam metus nec laoreet ... */}
             </Box>
             <Flex direction={"column"} gap={"4px"}>
               <Box
