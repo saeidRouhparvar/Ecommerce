@@ -3,8 +3,7 @@ import React from "react";
 import Typography from "../../Typography";
 import Container from "../../Container";
 import TrendingCard from "./TrendingCard";
-import product_01 from "../../../assets/img/product_01.png";
-import Slider from 'react-slick'
+import product_01 from "../../../../src/assets/img/product_01.png";
 
 const CardData = [
   {
