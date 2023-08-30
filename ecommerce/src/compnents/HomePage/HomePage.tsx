@@ -2,8 +2,8 @@ import React from "react";
 import Navbar from "../navbar/Navbar";
 import MainBanner from "../MainBanner/MainBanner";
 import Product from "../product/Product";
-import SlideShow from "../Carousel";
 import NewsLetter from "../NewsLatter/NewsLetter";
+import Footer from "../footer/Footer";
 
  const HomePage = () => {
   return (
@@ -12,7 +12,7 @@ import NewsLetter from "../NewsLatter/NewsLetter";
       <MainBanner />
       <Product />
       <NewsLetter/>
-      {/* <SlideShow/> */}
+      <Footer/>
     </>
   );
 }
