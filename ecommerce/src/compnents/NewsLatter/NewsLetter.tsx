@@ -1,4 +1,12 @@
-import { Box, Flex, useColorMode } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  useColorMode,
+  InputLeftElement,
+  InputGroup,
+  Input,
+  InputRightElement,
+} from "@chakra-ui/react";
 import React from "react";
 import Color from "../Color";
 import { Letter } from "../Svg";
@@ -26,17 +34,21 @@ const NewsLetter = () => {
       >
         Get E-mail updates about our latest shop{" "}
       </Box>
-      <Flex justify={"space-between"} align={"center"} p={"8px"} borderRadius={"8px"} bg={Color.ColorNatural.Natural22}>
-        <Flex gap={"10px"}>
-          <Box>{Letter}</Box>
-          <Box
-            color={colorMode === "light" ? Color.ColorNatural.Natural12 : ""}
-            {...Typography.Caption_Regular}
-          >
-            Enter your e mail address
-          </Box>
-        </Flex>
-        <Button variant="colorPrimaryFilled">Sign Up</Button>
+      <Flex
+        justify={"space-between"}
+        align={"center"}
+        p={"8px"}
+        borderRadius={"8px"}
+      >
+        <InputGroup >
+          <InputLeftElement pointerEvents="none">
+            <Box>{Letter}</Box>
+          </InputLeftElement>
+          <InputRightElement>
+            <Button me={8} variant="colorPrimaryFilled">Sign Up</Button>
+          </InputRightElement>
+          <Input _focusVisible={"none"} bg={Color.ColorNatural.Natural22} border={"none"} placeholder="Enter your e mail address" />
+        </InputGroup>
       </Flex>
     </Flex>
   );
