@@ -41,7 +41,7 @@ const CardData = [
 const FutureProducts = () => {
   const { colorMode } = useColorMode();
   return (
-    <Box mt={"58px"}>
+    <Container mt={"58px"}>
       <Flex justify={"space-between"} align={"center"}>
         <SectionHeader title="Future Products" />
         <Flex align={"center"}>
@@ -85,7 +85,7 @@ const FutureProducts = () => {
           ))}
         </Flex>
       </Container>
-    </Box>
+    </Container>
   );
 };
 
