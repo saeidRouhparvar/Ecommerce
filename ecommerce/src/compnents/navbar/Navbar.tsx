@@ -1,4 +1,12 @@
-import { Box, BoxProps, Flex, space, useColorMode } from "@chakra-ui/react";
+import {
+  Box,
+  BoxProps,
+  Fade,
+  Flex,
+  ScaleFade,
+  space,
+  useColorMode,useDisclosure
+} from "@chakra-ui/react";
 import { React, useState } from "react";
 import Color from "../Color";
 import Typography from "../Typography";
@@ -13,10 +21,15 @@ interface Interface extends BoxProps {
 }
 const Navbar = ({ ...reset }: Interface) => {
   const { colorMode } = useColorMode();
-  const [sideMenuShow, setSideMenuShow] = useState(false);
+  const [sideMenuShow, setSideMenuShow] = useState("-280px");
 
   return (
     <Container>
+      <SideMenu left={sideMenuShow} onClick={() => {
+        setSideMenuShow("-280px");
+
+      }}/>
+
       <Flex
         py={"10px"}
         bg={
@@ -31,9 +44,7 @@ const Navbar = ({ ...reset }: Interface) => {
         <Flex gap={"22px"} alignItems={"center"}>
           <Box
             onClick={() => {
-              setSideMenuShow(
-                (prevState: any) => sideMenuShow != prevState.sideMenuShow
-              );
+              setSideMenuShow("0");
             }}
           >
             {Burger}
@@ -64,8 +75,8 @@ const Navbar = ({ ...reset }: Interface) => {
           </Flex>
         </Flex>
       </Flex>
-      {sideMenuShow && <SideMenu />}
-      <Input variant="InputAlert" placeholder="fdgfdgfdgfdgdg" />
+      <Input variant="InputAlert" placeholder="test" />
+      
     </Container>
   );
 };
