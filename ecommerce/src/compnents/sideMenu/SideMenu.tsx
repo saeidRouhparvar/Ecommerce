@@ -1,4 +1,4 @@
-import { Box, Flex, useColorMode } from "@chakra-ui/react";
+import { Box, Flex, transition, useColorMode } from "@chakra-ui/react";
 import React from "react";
 import { signIn } from "../Svg";
 import Color from "../Color";
@@ -16,19 +16,26 @@ const menuData = [
   { title: "Contact Us", description: "", icon: "" },
 ];
 
-const SideMenu = () => {
+const SideMenu = ({left,onClick}:any) => {
   const { colorMode } = useColorMode();
+
+
+
   return (
     <Flex
+    animation={"3s ease-in-out"}
+    pos={"absolute"}
     w={"280px"}
       gap={"24px"}
       p={"16px"}
       direction={"column"}
       h={"100vh"}
       bg={colorMode === "light" ? Color.ColorNatural.Natural21 : ""}
+      zIndex={100}
+      left={left}
     >
       <Flex gap={"6px"} align={"center"} justify={"space-between"}>
-      <Box>close</Box>
+      <Box onClick={onClick}>close</Box>
         <Flex>
           <Box
             color={colorMode === "light" ? Color.ColorNatural.Natural12 : ""}
@@ -45,7 +52,7 @@ const SideMenu = () => {
       >
         Dinky Life
       </Box>
-      {/* {menuData.map((item: any) => (
+      {menuData.map((item: any) => (
         <Menu
         key={item.id}
           title={item.title}
@@ -53,7 +60,7 @@ const SideMenu = () => {
           icon={item.icon}
           to={`${item.title}`}
         />
-      ))} */}
+      ))}
     </Flex>
   );
 };
