@@ -3,6 +3,7 @@ import React from "react";
 import Typography from "../../Typography";
 import { Star } from "../../Svg";
 import Color from "../../Color";
+import Stars from "../../stars/Stars";
 interface Interface extends BoxProps {
   reset?: any;
   description?: any;
@@ -35,11 +36,7 @@ const TrendingCard = ({
               {description}
             </Box>
             <Flex my={"10px"} align={"center"}>
-              <Box>{Star}</Box>
-              <Box>{Star}</Box>
-              <Box>{Star}</Box>
-              <Box>{Star}</Box>
-              <Box>{Star}</Box>
+            <Stars/>
               <Box
                 {...Typography.Caption_Medium}
                 ms={"10px"}
